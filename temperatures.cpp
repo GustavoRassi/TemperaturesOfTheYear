@@ -29,6 +29,7 @@ int main()
    
     do
     {
+        //Clears screen for every attempt
         system("cls");
         
         printHeaderProgram();
@@ -43,6 +44,7 @@ int main()
         
         printHeaderTable();
         
+        //Calculations for each month
         for (int i = 0; i < lenght1; i++)
         {
             temp_max = tempMax(temp);
@@ -76,7 +78,7 @@ int main()
 
     return 0;
 }
-double tempMax(double t[12][2])
+double tempMax(double t[12][2]) //Finds highest temperature put of the highests
 {
     int lenght = 12;
     double x;
@@ -88,7 +90,7 @@ double tempMax(double t[12][2])
     
     return x;
 }
-double tempMin(double tem[12][2])
+double tempMin(double tem[12][2]) //Finds lowest temperature out of the lowests
 {
     int lenght = 12;
     double x;
@@ -100,7 +102,7 @@ double tempMin(double tem[12][2])
             
     return x;
 }
-void printReport(string month[12], double t[12][2], int a)
+void printReport(string month[12], double t[12][2], int a) //Prints out report of each month
 {
     cout << left;
     cout << setw(18);
@@ -115,7 +117,7 @@ void printReport(string month[12], double t[12][2], int a)
     cout << (t[a][0] + t[a][1]) / 2;
     cout << endl;
 }
-void printHeaderTable()
+void printHeaderTable() //Table header
 {
     int lenght = 85;
     
@@ -130,7 +132,7 @@ void printHeaderTable()
     
     cout << endl;
 }
-double averageTempMax(double t[12][2])
+double averageTempMax(double t[12][2]) //Calculates maximum temperatures
 {
     double av_max, sum_max = 0;
     int lenght = 12;
@@ -143,7 +145,7 @@ double averageTempMax(double t[12][2])
     
     return av_max;
 }
-double averageTempMin(double t[12][2])
+double averageTempMin(double t[12][2]) //Calculates minimum temperatures
 {
     int lenght = 12;
     double min_av, sum_min = 0;
@@ -156,7 +158,7 @@ double averageTempMin(double t[12][2])
     
     return min_av;
 }
-void printHeaderProgram()
+void printHeaderProgram() //Description of the program
 {
     cout << "Gustavo A. Rassi Fuentes          CCOM 3002 - MA5";
     cout << endl << endl;
